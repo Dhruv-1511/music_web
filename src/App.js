@@ -11,9 +11,10 @@ function App() {
       <BrowserRouter>
         <Sidebar />
         <div className='hero-box'>
-          <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Navbar />} >
+              <Route path="/" element={<Home />} />
+            </Route>
           </Routes>
           <Footer />
         </div>
