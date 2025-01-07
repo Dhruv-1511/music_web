@@ -1,0 +1,16 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background-color: #1F1F1F;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+
+:root{
+  --bluecolor: rgb(8,8,233);
+}
