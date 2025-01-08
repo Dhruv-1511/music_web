@@ -45,4 +45,20 @@ export const musicData = [
       rating: 1,
       playlist: ['Rap 🎤'],
     },
+    {
+      url: 'https://audio.jukehost.co.uk/ZLdoXNocDAcsgeq6QKtPRHyvlqslNbke',
+      title: 'As You Fade Away',
+      artist: 'NEFFEX',
+      artwork: 'https://i.ytimg.com/vi/JhUFfaArYk8/maxresdefault.jpg',
+      rating: 1,
+      playlist: ['Rap 🎤'],
+    },
+    {
+      url: 'https://audio.jukehost.co.uk/vTRYaTEbpaYRCxiWGgL2S91mnOuMKfLw',
+      title: "Guess I'll Never Know",
+      artist: 'TrackTribe',
+      artwork: 'https://f4.bcbits.com/img/a3736661212_65',
+      rating: 1,
+      playlist: ['Chill 🌱'],
+    },
   ];
