@@ -1,0 +1,7 @@
+.Geners-list{
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden; 
+    color: white;
+}
