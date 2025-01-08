@@ -61,7 +61,7 @@ const Home = () => {
             </div>
           
             <div className='Weekly-list' ref={ListRef}>
-              { musicData.map(list => (
+              { musicData.map((list) => (
                 <>
                   <SongCard
                     imgUrl={list.artwork}
