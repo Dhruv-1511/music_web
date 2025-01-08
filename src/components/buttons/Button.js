@@ -1,9 +1,11 @@
 import React from 'react'
 import { blueColor } from '../../assets/color'
+import './button.css'
 
 function Button({handleClick, title, bgColor}) {
   return (
     <button 
+        className='custom-button'
         onClick={handleClick}
         style={
             {
@@ -14,7 +16,7 @@ function Button({handleClick, title, bgColor}) {
                 color: bgColor ? 'white' : blueColor,
                 fontSize: '16px',   
                 width: '100%',
-                height: '36px',
+                height: '40px',
                 paddingInline: '12px',
                 cursor: 'pointer'
             }

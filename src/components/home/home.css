@@ -1,3 +1,76 @@
+.dd{
+    width: 100%;
+}
+
 .Home-container{
+    max-width: 1300px;
+    margin-inline: auto;
+    padding-inline: 26px;
+    margin-bottom: 24px;
+}
+
+.Top-container{
+    color: white;
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    border-radius: 35px;
+    background: url('../../../public/main_girl_img.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.contant-box{
+    max-width: 360px;
+    margin-left: 26px;
+}
+
+.contant-box .buttons{
+    display: flex;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.para-text{
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.top-header-text{
+    font-size: 2.5rem;
+    line-height: 58px;
+}
+
+.middle-text{
+    color: var(--bluecolor);
+}
+
+/*************** lists styles **************/
+
+.list-section-header{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.list-section-header span{
+    color: var(--bluecolor);
+}
+
+.second-container{
+    margin-top: 48px;
+}
+
+/************** Weeklt-list **************/
+
+.Weeklt-list{
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    overflow-x: hidden; 
     color: white;
 }

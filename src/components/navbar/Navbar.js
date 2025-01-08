@@ -2,7 +2,7 @@ import React from 'react'
 import './navbar.css';
 import Button from '../buttons/Button';
 import { blueColor } from '../../assets/color';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 function Navbar() {
 
@@ -12,45 +12,49 @@ function Navbar() {
     }
 
   return (
-    <nav className='Nav-container'>
-        <div className='Nav-box'>
-            <div className='serach-box'>
-                <div className='search-box-img'>
-                    <img src='search.png' alt="search" />
+    <>
+        <nav className='Nav-container'>
+            <div className='Nav-box'>
+                <div className='serach-box'>
+                    <div className='search-box-img'>
+                        <img src='search.png' alt="search" />
+                    </div>
+                    <input type="text" placeholder='Search For Musics, Artists, ...'/>
                 </div>
-                <input type="text" placeholder='Search For Musics, Artists, ...'/>
+
+                <NavLink to='/about'
+                    className={({ isActive }) =>
+                        isActive ? "active" : ""
+                    }
+                >About Us</NavLink>
+                <NavLink to='/contact'
+                    className={({ isActive }) =>
+                        isActive ? "active" : ""
+                    }
+                >Contact</NavLink>
+                <NavLink to='/premium'
+                    className={({ isActive }) =>
+                        isActive ? "active" : ""
+                    }
+                >Premium</NavLink>
+
+                <div className='Button-box'>
+                    <Button
+                        title='Login'    
+                        handleClick={handleClick}
+                    />
+                    <Button
+                        title='Login'    
+                        handleClick={handleClick}
+                        bgColor={blueColor}
+                    />
+
+                </div>
             </div>
+        </nav>
 
-            <NavLink to='/about'
-                className={({ isActive }) =>
-                    isActive ? "active" : ""
-                }
-            >About Us</NavLink>
-            <NavLink to='/contact'
-                className={({ isActive }) =>
-                    isActive ? "active" : ""
-                }
-            >Contact</NavLink>
-            <NavLink to='/premium'
-                className={({ isActive }) =>
-                    isActive ? "active" : ""
-                }
-            >Premium</NavLink>
-
-            <div className='Button-box'>
-                <Button
-                    title='Login'    
-                    handleClick={handleClick}
-                />
-                <Button
-                    title='Login'    
-                    handleClick={handleClick}
-                    bgColor={blueColor}
-                />
-
-            </div>
-        </div>
-    </nav>
+        <Outlet/>
+    </>
   )
 }
 

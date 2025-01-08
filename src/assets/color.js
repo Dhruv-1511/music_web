@@ -1,1 +1,1 @@
-export const blueColor = 'rgb(8,8,233)'
+export const blueColor = 'rgb(13, 13, 239)'

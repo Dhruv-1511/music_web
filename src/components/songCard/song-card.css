@@ -1,0 +1,36 @@
+.card-container{
+    background-color: #1F1F1F;
+    border-radius: 6px;
+    max-width: 200px;
+    height: 230px;
+    flex: 1;
+    color: white;
+    padding-inline: 16px;
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.song-image-box{
+    width: 100%;
+    height: 130px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.song-image-box img{
+    height: 100%;
+    width: 100%;
+}
+
+.song-title{
+    font-weight: 700;
+    margin-top: 18px;
+}
+
+.artist-title{
+    font-size: 13px;
+    font-weight: 100;
+    margin-bottom: 8px;
+}

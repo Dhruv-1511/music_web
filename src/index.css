@@ -4,7 +4,7 @@
 }
 
 body{
-  background-color: #1F1F1F;
+  background-color: #181818;
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -12,5 +12,5 @@ body{
 
 
 :root{
-  --bluecolor: rgb(8,8,233);
+  --bluecolor: rgb(13, 13, 239);
 }
