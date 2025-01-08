@@ -1,1 +1,1 @@
-export const blueColor = 'rgb(13, 13, 239)'
+export const blueColor = '#06A0B5'

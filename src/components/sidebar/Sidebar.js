@@ -48,40 +48,75 @@ const Sidebar = () => {
       </div>
       <div className='menu'>
         <p className='menu_name'>Library</p>
-        <div className='menu_icon'>
-          <img src='recent.png' alt='' />
-          <p>Recently Added</p>
-        </div>
-        <div className='menu_icon'>
-          <img src='most_played.png' alt='' />
-          <p>Most Played</p>
-        </div>
+        <NavLink to="/recentlyadded"
+          className={({ isActive }) =>
+            isActive ? "active" : "notActive"
+          }>
+          <div className='menu_icon'>
+            <img src='recent.png' alt='' />
+            <p>Recently Added</p>
+          </div>
+        </NavLink>
+        <NavLink to="/mostplayed"
+          className={({ isActive }) =>
+            isActive ? "active" : "notActive"
+          }>
+          <div className='menu_icon'>
+            <img src='most_played.png' alt='' />
+            <p>Most Played</p>
+          </div>
+        </NavLink>
       </div>
       <div className='menu'>
         <p className='menu_name'>Playlist and favorite</p>
-        <div className='menu_icon'>
-          <img src='heart.png' alt='' />
-          <p>Your favorites</p>
-        </div>
-        <div className='menu_icon'>
-          <img src='playlist.png' alt='' />
-          <p>Your playlist</p>
-        </div>
-        <div className='menu_icon'>
-          <img src='add_playlist.png' alt='' />
-          <p>Add playlist</p>
-        </div>
+        <NavLink to="/favorites"
+          className={({ isActive }) =>
+            isActive ? "active" : "notActive"
+          }>
+          <div className='menu_icon'>
+            <img src='heart.png' alt='' />
+            <p>Your favorites</p>
+          </div>
+        </NavLink>
+        <NavLink to="/yourplaylist"
+          className={({ isActive }) =>
+            isActive ? "active" : "notActive"
+          }>
+          <div className='menu_icon'>
+            <img src='playlist.png' alt='' />
+            <p>Your playlist</p>
+          </div>
+        </NavLink>
+        <NavLink to="/addplaylist"
+          className={({ isActive }) =>
+            isActive ? "active" : "notActive"
+          }>
+          <div className='menu_icon'>
+            <img src='add_playlist.png' alt='' />
+            <p>Add playlist</p>
+          </div>
+        </NavLink>
       </div>
       <div className='menu'>
         <p className='menu_name'>general</p>
-        <div className='menu_icon'>
-          <img src='setting.png' alt='' />
-          <p>Setting</p>
-        </div>
-        <div className='menu_icon'>
-          <img src='logout.png' alt='' />
-          <p>Logout</p>
-        </div>
+        <NavLink to="/setting"
+          className={({ isActive }) =>
+            isActive ? "active" : "notActive"
+          }>
+          <div className='menu_icon'>
+            <img src='setting.png' alt='' />
+            <p>Setting</p>
+          </div>
+        </NavLink>
+        <NavLink to="/logout"
+          className={({ isActive }) =>
+            isActive ? "active" : "notActive"
+          }>
+          <div className='menu_icon'>
+            <img src='logout.png' alt='' />
+            <p>Logout</p>
+          </div>
+        </NavLink>
       </div>
     </div>
   )

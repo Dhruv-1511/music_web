@@ -2,6 +2,17 @@
     margin-top: 26px;
     display: flex;
     justify-content: space-between;
-    overflow-x: hidden; 
+    gap: 20px;
+    overflow-x: auto; 
     color: white;
+    scroll-behavior: smooth;
+    margin-bottom: 26px;
+}
+
+.Geners-list::-webkit-scrollbar {
+    display: none;
+}
+
+.mood-playlist-container{
+    margin-block: 4rem;
 }

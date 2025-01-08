@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './home.css'
 import Button from '../buttons/Button'
 import { blueColor } from '../../assets/color'
 import { musicData } from '../../db'
 import SongCard from '../songCard/SongCard'
+import { FaChevronLeft, FaChevronRight  } from "react-icons/fa6";
+
 
 const Home = () => {
+
+  const ListRef = useRef(null);
+
+  const handleScroll = (direction) => {
+    console.log('hi');
+    
+    if(ListRef.current){
+      const scrollPixel = ListRef.current.clientWidth;
+
+      ListRef.current.scrollBy({
+        left: direction === "right" ? scrollPixel : -scrollPixel
+      });
+
+    }
+  }
 
   return (
     <main className='dd'> 
@@ -34,19 +51,36 @@ const Home = () => {
         <section className='second-container'>
           <p className='list-section-header'>Weekly Top <span>Songs</span></p>
 
-            {/* Weeklt-list components */}
-          <div className='Weeklt-list'>
-            { musicData.map(list => (
-              <>
-                <SongCard
-                  imgUrl={list.artwork}
-                  alt={list.title}
-                  songTitle={list.title}
-                  artistName={list.artist}
-                />
-              </>
-            ))
-            }
+          {/* Weeklt-list components */}
+          <div className='weekly-list-box'>
+            <div 
+              className='left-arrow' 
+              onClick={() => handleScroll('left')}
+            >
+              <FaChevronLeft/> 
+            </div>
+          
+            <div className='Weekly-list' ref={ListRef}>
+              { musicData.map(list => (
+                <>
+                  <SongCard
+                    imgUrl={list.artwork}
+                    alt={list.title}
+                    songTitle={list.title}
+                    artistName={list.artist}
+                  />
+                </>
+                ))
+              }
+            </div>
+
+            <div 
+              className='right-arrow'
+              onClick={() => handleScroll('right')}
+            >
+              <FaChevronRight />
+            </div>
+
           </div>
         </section>
       </div>
