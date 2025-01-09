@@ -30,7 +30,7 @@
     color: var(--bluecolor);
 }
 
-.Nav-container a.active{
+.Nav-container a.cuurent{
     color: var(--bluecolor);
     font-weight: bold;
 }
@@ -70,4 +70,15 @@
     gap: 12px;
     flex: 1;
     max-width: 400px;
+}
+
+.top-menu-icon{
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1070px){
+    .top-menu-icon{
+        display: contents;
+    }
 }

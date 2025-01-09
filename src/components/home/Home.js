@@ -1,28 +1,20 @@
 import React, { useRef } from 'react'
 import './home.css'
-import Button from '../buttons/Button'
 import { blueColor } from '../../assets/color'
 import { musicData } from '../../db'
 import SongCard from '../songCard/SongCard'
-import { FaChevronLeft, FaChevronRight  } from "react-icons/fa6";
+import Button from '../common/buttons/Button'
+import LeftButtton from '../common/buttons/LeftButtton'
+import RightButton from '../common/buttons/rightButton'
 
 
 const Home = () => {
 
-  const ListRef = useRef(null);
+  const ListRef1 = useRef(null);
+  const ListRef2 = useRef(null);
 
-  const handleScroll = (direction) => {
-    console.log('hi');
-    
-    if(ListRef.current){
-      const scrollPixel = ListRef.current.clientWidth;
-
-      ListRef.current.scrollBy({
-        left: direction === "right" ? scrollPixel : -scrollPixel
-      });
-
-    }
-  }
+  console.log('home');
+  
 
   return (
     <main className='dd'> 
@@ -51,16 +43,12 @@ const Home = () => {
         <section className='second-container'>
           <p className='list-section-header'>Weekly Top <span>Songs</span></p>
 
-          {/* Weeklt-list components */}
           <div className='weekly-list-box'>
-            <div 
-              className='left-arrow' 
-              onClick={() => handleScroll('left')}
-            >
-              <FaChevronLeft/> 
-            </div>
+            {/* Left arrow button component */}
+            <LeftButtton refs={ListRef1}/>
           
-            <div className='Weekly-list' ref={ListRef}>
+            {/* SongCard Component */}
+            <div className='Weekly-list' ref={ListRef1}>
               { musicData.map((list) => (
                 <>
                   <SongCard
@@ -74,13 +62,35 @@ const Home = () => {
               }
             </div>
 
-            <div 
-              className='right-arrow'
-              onClick={() => handleScroll('right')}
-            >
-              <FaChevronRight />
+            {/* Right arrow button component */}
+            <RightButton refs={ListRef1}/>
+          </div>
+        </section>
+
+        <section className='second-container'>
+          <p className='list-section-header'>Weekly Top <span>Songs</span></p>
+
+          <div className='weekly-list-box'>
+            {/* Left arrow button component */}
+            <LeftButtton refs={ListRef2}/>
+          
+            {/* SongCard Component */}
+            <div className='Weekly-list' ref={ListRef2}>
+              { musicData.map((list) => (
+                <>
+                  <SongCard
+                    imgUrl={list.artwork}
+                    alt={list.title}
+                    songTitle={list.title}
+                    artistName={list.artist}
+                  />
+                </>
+                ))
+              }
             </div>
 
+            {/* Right arrow button component */}
+            <RightButton refs={ListRef2}/>
           </div>
         </section>
       </div>

@@ -1,10 +1,10 @@
 import React from 'react'
 import './navbar.css';
 import Button from '../buttons/Button';
-import { blueColor } from '../../assets/color';
+import { blueColor } from '../../../assets/color';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({setToggleSideBar}) {
 
     const navigate = useNavigate();
 
@@ -24,7 +24,9 @@ function Navbar() {
 
                 <div className='menu-search'>
                     {/* Menu Icon */}
-                    <div>
+                    <div 
+                        onClick={() => setToggleSideBar(true)}
+                        className='top-menu-icon'>
                         <img src="hamburger.svg" alt="menu" />
                     </div>
 
@@ -40,17 +42,17 @@ function Navbar() {
 
                 <NavLink to='/about'
                     className={({ isActive }) =>
-                        isActive ? "active" : ""
+                        isActive ? "cuurent" : ""
                     }
                 >About Us</NavLink>
                 <NavLink to='/contact'
                     className={({ isActive }) =>
-                        isActive ? "active" : ""
+                        isActive ? "cuurent" : ""
                     }
                 >Contact</NavLink>
                 <NavLink to='/premium'
                     className={({ isActive }) =>
-                        isActive ? "active" : ""
+                        isActive ? "cuurent" : ""
                     }
                 >Premium</NavLink>
 
@@ -64,7 +66,6 @@ function Navbar() {
                         handleClick={handleSignUp}
                         bgColor={blueColor}
                     />
-
                 </div>
             </div>
         </nav>

@@ -61,4 +61,18 @@
         transform: translateX(-280px);
         transition: all 500ms;
     }  
+
+    .show-sidebar{
+        transform: translateX(0px);
+    }
+
+    .morphism{
+        z-index: 9;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #292727b1;
+    } 
 }

@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './components/footer/Footer';
-import Navbar from './components/navbar/Navbar';
-import Sidebar from './components/sidebar/Sidebar';
 import Home from './components/home/Home';
 import Discover from './components/discover/Discover';
 import AboutUs from './components/aboutus/AboutUs';
 import Contact from './components/contact/Contact';
 import Premium from './components/premium/Premium';
 import { useState } from 'react';
+import Navbar from './components/common/navbar/Navbar';
+import Footer from './components/common/footer/Footer';
+import Sidebar from './components/common/sidebar/Sidebar'
 
 function App() {
  

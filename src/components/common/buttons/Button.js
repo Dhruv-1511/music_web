@@ -1,6 +1,6 @@
 import React from 'react'
-import { blueColor } from '../../assets/color'
 import './button.css'
+import { blueColor } from '../../../assets/color'
 
 function Button({handleClick, title, bgColor}) {
   return (
