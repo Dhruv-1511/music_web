@@ -41,3 +41,24 @@
 .menu_icon p{
     color: white;
 }
+.active{
+    background-color: var(--bluecolor);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+.notActive{
+    text-decoration: none;
+}
+/**************** Media Query ********************/
+
+@media(max-width: 1070px) {
+    .sidebar{
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        transform: translateX(-280px);
+        transition: all 500ms;
+    }  
+}
