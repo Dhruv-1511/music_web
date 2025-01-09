@@ -4,18 +4,34 @@ import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import Sidebar from './components/sidebar/Sidebar';
 import Home from './components/home/Home';
+<<<<<<< HEAD
 import Discover from './components/discover/Discover';
+=======
+import AboutUs from './components/aboutus/AboutUs';
+import Contact from './components/contact/Contact';
+import Premium from './components/premium/Premium';
+import { useState } from 'react';
+>>>>>>> 404b09a543c6aad8e28cd54017d052b02e59cfa6
 
 function App() {
+ 
+  const [toggleSideBar, setToggleSideBar] = useState(false)
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Sidebar />
+        <Sidebar toggleSideBar={toggleSideBar} setToggleSideBar={setToggleSideBar}/>
         <div className='hero-box'>
           <Routes>
-            <Route path="/" element={<Navbar />} >
+            <Route path="/" element={<Navbar toggleSideBar={toggleSideBar} setToggleSideBar={setToggleSideBar}/>} >
               <Route path="/" element={<Home />} />
+<<<<<<< HEAD
               <Route path="/discover" element={<Discover />} />
+=======
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/contact" element={<Contact/>} />
+              <Route path="/premium" element={<Premium />} />
+>>>>>>> 404b09a543c6aad8e28cd54017d052b02e59cfa6
             </Route>
           </Routes>
           <Footer />

@@ -9,6 +9,7 @@
     background-color: #181818;
     border-right: 2px solid var(--bluecolor);
     box-shadow: 0px 0px 10px 0px var(--bluecolor);
+    
 }
 .logo{
     color: var(--bluecolor);
@@ -39,14 +40,4 @@
 }
 .menu_icon p{
     color: white;
-}
-.active{
-    background-color: var(--bluecolor);
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%;
-}
-.notActive{
-    text-decoration: none;
 }

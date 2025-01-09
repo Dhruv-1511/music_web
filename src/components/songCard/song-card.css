@@ -10,7 +10,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+    cursor: pointer;
+}   
 
 .song-image-box{
     width: 100%;

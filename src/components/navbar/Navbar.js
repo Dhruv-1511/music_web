@@ -2,25 +2,41 @@ import React from 'react'
 import './navbar.css';
 import Button from '../buttons/Button';
 import { blueColor } from '../../assets/color';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 
 function Navbar() {
 
-    // go to login
-    const handleClick = () => {
+    const navigate = useNavigate();
 
+    // go to login
+    const handleLogin = () => {
+        navigate('/')
+    }
+    // go to 
+    const handleSignUp = () => {
+        navigate('/')
     }
 
   return (
     <>
         <nav className='Nav-container'>
             <div className='Nav-box'>
-                <div className='serach-box'>
-                    <div className='search-box-img'>
-                        <img src='search.png' alt="search" />
+
+                <div className='menu-search'>
+                    {/* Menu Icon */}
+                    <div>
+                        <img src="hamburger.svg" alt="menu" />
                     </div>
-                    <input type="text" placeholder='Search For Musics, Artists, ...'/>
+
+                    {/* Search Input */}
+                    <div className='serach-box'>
+                        <div className='search-box-img'>
+                            <img src='search.png' alt="search" />
+                        </div>
+                        <input type="text" placeholder='Search For Musics, Artists, ...'/>
+                    </div>
                 </div>
+
 
                 <NavLink to='/about'
                     className={({ isActive }) =>
@@ -41,11 +57,11 @@ function Navbar() {
                 <div className='Button-box'>
                     <Button
                         title='Login'    
-                        handleClick={handleClick}
+                        handleClick={handleLogin}
                     />
                     <Button
-                        title='Login'    
-                        handleClick={handleClick}
+                        title='Sign Up'    
+                        handleClick={handleSignUp}
                         bgColor={blueColor}
                     />
 
