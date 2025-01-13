@@ -12,9 +12,13 @@ import MusicVideo from '../musicVideo/MusicVideo'
 import TopAlbums from '../topAlbums/TopAlbums'
 import MoodPlaylist from '../moodPlaylist/MoodPlaylist'
 import SongListCard from '../songListCard/SongListCard'
+import { FaPlus } from "react-icons/fa";
+import { NavLink } from 'react-router-dom'
+
 
 const Home = () => {
 
+  const topSixSong = musicData.slice(0, 6)
   const ListRef1 = useRef(null);
   console.log('home');
 
@@ -75,33 +79,41 @@ const Home = () => {
         <section className='second-container'>
           <p className='list-section-header'>Trending <span>Songs</span></p>
 
-          <table >
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Name</th>
-                <th>Release Date</th>
-                <th>Album</th>
-                <th>Time</th>
-              </tr>
-            </thead>
-            <tbody>
+          <div className='trending-song-table'>
+            <table >
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Name</th>
+                  <th>Release Date</th>
+                  <th>Album</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody>
 
-              {musicData.map((list) => (
-                <>
-                  <SongListCard
-                    id={list.id}
-                    imgUrl={list.artwork}
-                    songTitle={list.title}
-                    artistName={list.artist}
-                    releaseDate={list.releasedate}
-                    album={list.album}
-                    time={list.time} />
-                </>
-              ))}
-            </tbody>
+                {topSixSong.map((list) => (
+                  <>
+                    <SongListCard
+                      id={list.id}
+                      imgUrl={list.artwork}
+                      songTitle={list.title}
+                      artistName={list.artist}
+                      releaseDate={list.releasedate}
+                      album={list.album}
+                      time={list.time} />
+                  </>
+                ))}
+              </tbody>
 
-          </table>
+            </table>
+            <NavLink to="/albums" className="notActive">
+              <div className='view-all'>
+                <FaPlus />
+                <p>View All</p>
+              </div>
+            </NavLink>
+          </div>
         </section>
 
         <Artist />

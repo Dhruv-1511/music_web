@@ -91,6 +91,12 @@
     display: none;
 }
 
+.trending-song-table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 table{
     color: white;
     width: 100%;
@@ -107,55 +113,13 @@ tr{
     border: 1px solid white;
 }
 
-.song-detail{
+.view-all{
     background-color: #1E1E1E;
-}
-
-.song-no{
-    font-size: 25px;
-    background-color: #181818;
-    padding-right: 20px;
-}
-
-.song-artist-name{
+    color: white;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-}
-
-.song-artist-name1{
-    font-size: 20px;
-}
-
-.song-artist-name2{
-    font-size: 13px;
-}
-
-.song-name{
-    display: flex;
-    gap: 20px;
-    text-align: start;
-}
-
-.song-img{
-    height: 65px;
-    width: 65px;
-}
-
-.song-img img{
-    height: 100%;
-    width: 100%;
-    border-radius: 8px;
-}
-
-.song-like{
-    display: flex;
-    align-items: center;
     gap: 15px;
-}
-
-.heart{
-    font-size: 30px;
-    color: var(--bluecolor);
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
 }

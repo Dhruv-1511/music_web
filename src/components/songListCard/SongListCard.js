@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { CiHeart } from "react-icons/ci";
-
+import './song-list-card.css'
 
 const SongListCard = ({id, imgUrl, songTitle, artistName, releaseDate, album, time}) => {
 
