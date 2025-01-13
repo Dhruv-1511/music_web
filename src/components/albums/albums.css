@@ -7,16 +7,58 @@
     background: linear-gradient(90deg, #1171E2, #0d87c0, #326d89);
 }
 
+.main-albums{   
+    box-shadow: 0px 14px 25px 4px black;
+    border-radius: 12px;
+}
+
 .album-top-container{
     display: flex;
     justify-content: space-between;
     background: linear-gradient(90deg, #1171E2, #0d87c0, #326d89);
     padding: 30px;
     color: white;
-    box-shadow: 10px 9px 25px 4px black;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
+/* secondary navbar css */
+.secondary-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 18px;
+    padding-block: 18px;
+}
+
+.secondary-navbar-links{
+    display: flex; 
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+}
+
+.secondary-navbar-links a{
+    text-decoration: none;
+    color: white;
+}
+
+.secondary-navbar-links a:hover{
+    color: rgb(76, 159, 218)
+}
+
+.leftArrowBox{
+    width: 20px;
+    height: 20px;
+}
+
+.leftArrowBox img{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* main content css */
 .album-top-left-container{
     display: flex;
     gap: 30px;
@@ -71,4 +113,10 @@
 
 .play-btn{
     font-size: 45px;
+}
+
+@media (max-width: 1070px) {
+    .secondary-navbar{
+        padding-block: 10px;
+    }
 }

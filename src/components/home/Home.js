@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './home.css'
 import { blueColor } from '../../assets/color'
 import { musicData } from '../../db'
@@ -22,7 +22,23 @@ const Home = () => {
   const ListRef1 = useRef(null);
   console.log('home');
   
+  // save song by heart button
+  const [liked, setLikeed] = useState({});
 
+  const handleAdd = (e, ListId) => {
+    e.stopPropagation();
+    setLikeed(pre => ({
+      ...pre,
+      [ListId]: !pre[ListId]
+    }))
+  }
+
+  const handleSelect = (id) => {
+    console.log(id);
+  }
+
+  console.log(liked);
+  
   return (
     <main className='dd'>
       <div className='Home-container'>
@@ -57,14 +73,13 @@ const Home = () => {
             {/* SongCard Component */}
             <div className='Weekly-list' ref={ListRef1}>
               {musicData.map((list) => (
-                <>
                   <SongCard
+                    key={list.id}
                     imgUrl={list.artwork}
                     alt={list.title}
                     songTitle={list.title}
                     artistName={list.artist}
                   />
-                </>
               ))
               }
             </div>
@@ -74,8 +89,10 @@ const Home = () => {
           </div>
         </section>
 
+        {/* New-Release-Songs Section */}
         <NewRelease />
 
+        {/* Trending-Songs Section */}
         <section className='second-container'>
           <p className='list-section-header'>Trending <span>Songs</span></p>
 
@@ -93,16 +110,19 @@ const Home = () => {
               <tbody>
 
                 {topSixSong.map((list) => (
-                  <>
                     <SongListCard
+                      key={list.id}
                       id={list.id}
                       imgUrl={list.artwork}
                       songTitle={list.title}
                       artistName={list.artist}
                       releaseDate={list.releasedate}
                       album={list.album}
-                      time={list.time} />
-                  </>
+                      time={list.time} 
+                      handleAdd={handleAdd}
+                      handleSelect={handleSelect}
+                      liked={liked}
+                    />
                 ))}
               </tbody>
 
