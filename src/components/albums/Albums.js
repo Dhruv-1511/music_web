@@ -10,7 +10,7 @@ const Albums = () => {
       <div className='Albums-container'>
         <section className='album-top-container'>
           <div className='album-top-left-container'>
-            <div>
+            <div className='album-img'>
               <img src='albumsbg.svg' alt='' />
             </div>
             <div className='album-content'>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { CiHeart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
+
+
 import './song-list-card.css'
 
 const SongListCard = ({id, imgUrl, songTitle, artistName, releaseDate, album, time}) => {
@@ -24,7 +26,7 @@ const SongListCard = ({id, imgUrl, songTitle, artistName, releaseDate, album, ti
             <td>{album}</td>
             <td >
                 <div className='song-like'>
-                    <CiHeart onClick={() => setLike(!like)} className='heart' style={like ? { backgroundColor: 'var(--bluecolor)' } : ""} />
+                    <FaHeart onClick={() => setLike(!like)} className='heart' style={like ? {color: 'var(--bluecolor)' } : ""} />
                     <p>{time}</p>
                 </div>
             </td>

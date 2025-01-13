@@ -4,13 +4,13 @@
     margin-bottom: 24px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    background: linear-gradient(to right, #1171E2 0%, #53ADD6 98%, #8BCBE7 100%);
+    background: linear-gradient(90deg, #1171E2, #0d87c0, #326d89);
 }
 
 .album-top-container{
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(90deg, #1171E2, #53ADD6);
+    background: linear-gradient(90deg, #1171E2, #0d87c0, #326d89);
     padding: 30px;
     color: white;
     box-shadow: 10px 9px 25px 4px black;
@@ -22,10 +22,21 @@
     gap: 30px;
 }
 
+.album-img{
+    max-width: 270px;
+    height: 100%;
+}
+
+.album-img img{
+    width: 100%;
+    height: 100%;
+}
+
 .album-content{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 10px;
     max-width: 330px;
     margin-block : 20px;
 }
@@ -55,7 +66,7 @@
     font-size: 25px;
     margin-bottom: 20px;
     cursor: pointer;
-    color: #19225d;
+    color: var(--bluecolor);
 }
 
 .play-btn{

@@ -1,4 +1,3 @@
-
 .song-detail{
     background-color: #1E1E1E;
 }
@@ -49,5 +48,6 @@
 
 .heart{
     font-size: 30px;
-    color: var(--bluecolor);
+    cursor: pointer;
+    
 }
