@@ -1,18 +1,25 @@
-.Geners-list{
-    margin-top: 26px;
+.Discover-container {
+    margin-inline: auto;
+    max-width: 1400px;
+    margin-top: 2rem;
+    padding-inline: 26px;
+    margin-bottom: 24px;
+}
+
+.Geners-list {
+    margin-block: 26px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    overflow-x: auto; 
+    overflow-x: auto;
     color: white;
     scroll-behavior: smooth;
-    margin-bottom: 26px;
 }
 
 .Geners-list::-webkit-scrollbar {
     display: none;
 }
 
-.mood-playlist-container{
-    margin-block: 4rem;
+.mood-playlist-container {
+    margin-block: 2rem;
 }

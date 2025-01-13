@@ -35,7 +35,7 @@ const Sidebar = ({toggleSideBar, setToggleSideBar}) => {
               <p>Discover</p>
             </div>
           </NavLink>
-          <NavLink to="/album"
+          <NavLink to="/albums"
             className={({ isActive }) =>
               isActive ? "active" : "notActive"
             }>

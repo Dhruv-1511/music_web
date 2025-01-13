@@ -1,0 +1,28 @@
+.artist-container{
+    margin-block: 2rem;
+    position: relative;
+}
+.artist-box{
+    margin-top: 20px;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    gap: 20px;
+}
+.artists{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 185px;
+    min-width: 185px;
+}
+.artists img{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+.artists p{
+    margin-top: 20px;
+    color: white;
+}
+

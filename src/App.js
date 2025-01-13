@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/home/Home';
@@ -5,10 +6,10 @@ import Discover from './components/discover/Discover';
 import AboutUs from './components/aboutus/AboutUs';
 import Contact from './components/contact/Contact';
 import Premium from './components/premium/Premium';
-import { useState } from 'react';
 import Navbar from './components/common/navbar/Navbar';
 import Footer from './components/common/footer/Footer';
 import Sidebar from './components/common/sidebar/Sidebar'
+import Albums from './components/albums/Albums';
 
 function App() {
  
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" element={<Navbar toggleSideBar={toggleSideBar} setToggleSideBar={setToggleSideBar}/>} >
               <Route path="/" element={<Home />} />
               <Route path="/discover" element={<Discover />} />
+              <Route path="/albums" element={<Albums />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/contact" element={<Contact/>} />
               <Route path="/premium" element={<Premium />} />
