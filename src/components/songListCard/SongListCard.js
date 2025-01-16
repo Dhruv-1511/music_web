@@ -1,15 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FaHeart } from "react-icons/fa";
 
 
 import './song-list-card.css'
 
-const SongListCard = ({id, imgUrl, songTitle, artistName, releaseDate, album, time}) => {
-
-    const [like, setLike] = useState(false)
+const SongListCard = ({
+    id, 
+    imgUrl, 
+    songTitle, 
+    artistName, 
+    releaseDate, 
+    handleSelect,
+    album, 
+    time, 
+    handleAdd, 
+    liked
+}) => {
 
     return (
-        <tr className='song-detail'>
+        <tr className='song-detail' onClick={() => handleSelect(id)}>
             <td className='song-no'>#{id}</td>
             <td>
                 <div className='song-name'>
@@ -23,10 +32,14 @@ const SongListCard = ({id, imgUrl, songTitle, artistName, releaseDate, album, ti
                 </div>
             </td>
             <td>{releaseDate}</td>
-            <td>{album}</td>
+            <td className='table-album'>{album}</td>
             <td >
                 <div className='song-like'>
-                    <FaHeart onClick={() => setLike(!like)} className='heart' style={like ? {color: 'var(--bluecolor)' } : ""} />
+                    <FaHeart 
+                        onClick={(e) => handleAdd(e, id)} 
+                        className='heart' 
+                        style={liked[id] ? {color: 'var(--bluecolor)' } : ""} 
+                    />
                     <p>{time}</p>
                 </div>
             </td>

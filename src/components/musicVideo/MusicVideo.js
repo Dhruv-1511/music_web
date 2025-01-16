@@ -15,7 +15,7 @@ const MusicVideo = () => {
                 <LeftButtton refs={ListRef4} />
                 <div className='Geners-list' ref={ListRef4}>
                     {musicData.map(list => (
-                        <div className='music-list'>
+                        <div className='music-list' key={list.id}>
                             <div className='music-image'>
                                 <img src={list.artwork} alt='' />
                             </div>

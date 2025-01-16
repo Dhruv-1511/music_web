@@ -1,0 +1,75 @@
+.Artists-container{
+    margin-inline: 26px;
+    border-radius: 10px;
+    padding-bottom: 48px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.artist-top-container{
+    position: relative;
+}
+
+.artist-top-img{
+    width: 100%;
+}
+
+.artist-top-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.artists-name{
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    color: white;
+    font-size: 85px;
+    font-weight: 600;
+}
+
+.popular-section-header{
+    margin-left: 30px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.show-more{
+    color: white;
+    background-color: var(--bluecolor);
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.artists-second-container{
+    margin-block: 48px;
+    overflow: hidden;
+    padding-inline: 15px;
+}
+
+
+.artists img{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.artists-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 285px;
+    min-width: 285px;
+}
+.artists-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+.artists-img p{
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+}

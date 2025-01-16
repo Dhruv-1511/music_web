@@ -25,13 +25,12 @@ const Discover = () => {
 
           <div className='Geners-list' ref={ListRef}>
             {musicData.map(list => (
-              <>
                 <GenreCard
+                  key={list.id}
                   imgUrl={list.artwork}
                   alt={list.title}
                   songTitle={list.title}
                 />
-              </>
             ))
             }
           </div>

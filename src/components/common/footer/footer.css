@@ -62,3 +62,26 @@
 .social img{
     height: 30px;
 }
+
+@media (max-width: 800px) {
+    .footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .about{
+        width: unset;
+        text-align: center;
+    }
+    .about p {
+        margin-top: 10px;
+        line-height: 20px;
+    }
+    .tables{
+        width: unset;
+        text-align: center;
+    }
+    .social_icons{
+        width: unset;
+        gap: 20px;
+    }
+}

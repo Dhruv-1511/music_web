@@ -10,6 +10,7 @@ import Navbar from './components/common/navbar/Navbar';
 import Footer from './components/common/footer/Footer';
 import Sidebar from './components/common/sidebar/Sidebar'
 import Albums from './components/albums/Albums';
+import Artists from './components/artists/Artists';
 
 function App() {
  
@@ -25,6 +26,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/discover" element={<Discover />} />
               <Route path="/albums" element={<Albums />} />
+              <Route path="/artists" element={<Artists />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/contact" element={<Contact/>} />
               <Route path="/premium" element={<Premium />} />

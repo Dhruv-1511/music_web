@@ -34,3 +34,24 @@
     justify-content: space-between;
     font-size: 12px;
 }
+@media (max-width: 800px) {
+    .music-list{
+        padding: 8px;
+    }
+    .music-image {
+        height: 180px;
+        min-width: 270px;
+    }
+}
+@media (max-width: 480px) {
+    .music-image {
+        height: 100px;
+        min-width: 150px;
+    }
+    .music-list-title {
+        font-size: 14px;
+    }
+    .music-list-detail {
+        font-size: 10px;
+    }
+}

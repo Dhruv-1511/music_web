@@ -26,3 +26,20 @@
     color: white;
 }
 
+@media (max-width: 800px) {
+    .artists{
+        min-width: 140px;
+        min-height: 140px;
+    }
+    .artists p{
+        font-size: 12px;
+    }
+}
+@media (max-width: 480px) {
+    .artists{
+        min-width: 110px;
+    }
+    .artists p{
+        font-size: 11px;
+    }
+}

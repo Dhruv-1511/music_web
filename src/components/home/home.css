@@ -234,3 +234,54 @@ tr{
     border: none;
     box-shadow: 0px 0px 10px 2px black;
 }
+@media (max-width: 800px) {
+    .Home-container{
+        padding-inline: 14px;
+    }
+    .Top-container{
+        background: none;
+        height: auto;
+        border-radius: unset;
+        margin-block: 80px;
+    }
+    .contant-box{
+        max-width: 100%;
+        text-align: center;
+        margin-left: unset;
+    }
+    .top-header-text {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    .para-text {
+        margin-top: 15px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .list-section-header {
+        font-size: 1.4rem;
+    }
+    .trending-song-table{
+        font-size: 12px;
+    }
+    table{
+        border-spacing: 5px;
+    }
+    .table-album{
+        display: none;
+    }
+    .login-container{
+        flex-direction: column;
+    }
+    .login-container-left{
+        text-align: center;
+    }
+    .login-container-right{
+        padding: 12px;
+        min-width: unset;
+        width: 90%;
+    }
+    .login-inputs1{
+        flex-direction: column;
+    }
+}

@@ -23,10 +23,24 @@ const Home = () => {
 
   const topSixSong = musicData.slice(0, 6)
   const ListRef1 = useRef(null);
-  console.log('home');
   const [user, setUser] = useState("signup")
 
+  
+  // save song by heart button
+  const [liked, setLikeed] = useState({});
 
+  const handleAdd = (e, ListId) => {
+    e.stopPropagation();
+    setLikeed(pre => ({
+      ...pre,
+      [ListId]: !pre[ListId]
+    }))
+  }
+
+  const handleSelect = (id) => {
+    console.log(id);
+  }
+  
   return (
     <main className='dd'>
       <div className='Home-container'>
@@ -61,14 +75,13 @@ const Home = () => {
             {/* SongCard Component */}
             <div className='Weekly-list' ref={ListRef1}>
               {musicData.map((list) => (
-                <>
                   <SongCard
+                    key={list.id}
                     imgUrl={list.artwork}
                     alt={list.title}
                     songTitle={list.title}
                     artistName={list.artist}
                   />
-                </>
               ))
               }
             </div>
@@ -78,8 +91,10 @@ const Home = () => {
           </div>
         </section>
 
+        {/* New-Release-Songs Section */}
         <NewRelease />
 
+        {/* Trending-Songs Section */}
         <section className='second-container'>
           <p className='list-section-header'>Trending <span>Songs</span></p>
 
@@ -90,23 +105,26 @@ const Home = () => {
                   <th>No</th>
                   <th>Name</th>
                   <th>Release Date</th>
-                  <th>Album</th>
+                  <th className='table-album'>Album</th>
                   <th>Time</th>
                 </tr>
               </thead>
               <tbody>
 
                 {topSixSong.map((list) => (
-                  <>
                     <SongListCard
+                      key={list.id}
                       id={list.id}
                       imgUrl={list.artwork}
                       songTitle={list.title}
                       artistName={list.artist}
                       releaseDate={list.releasedate}
                       album={list.album}
-                      time={list.time} />
-                  </>
+                      time={list.time} 
+                      handleAdd={handleAdd}
+                      handleSelect={handleSelect}
+                      liked={liked}
+                    />
                 ))}
               </tbody>
 

@@ -4,19 +4,25 @@
     margin-bottom: 24px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    background: linear-gradient(90deg, #1171E2, #0d87c0, #326d89);
+    background: linear-gradient(90deg, #153355, #113141, #0c222c);
+}
+
+.main-albums{   
+    box-shadow: 0px 14px 25px 4px black;
+    border-radius: 12px;
 }
 
 .album-top-container{
+    position: relative;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(90deg, #1171E2, #0d87c0, #326d89);
+    background: linear-gradient(90deg, #153355, #113141, #0c222c);
     padding: 30px;
     color: white;
-    box-shadow: 10px 9px 25px 4px black;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
+/* main content css */
 .album-top-left-container{
     display: flex;
     gap: 30px;
@@ -71,4 +77,10 @@
 
 .play-btn{
     font-size: 45px;
+}
+
+@media (max-width: 1070px) {
+    .secondary-navbar{
+        padding-block: 10px;
+    }
 }

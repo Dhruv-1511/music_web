@@ -8,8 +8,9 @@ export const musicData = [
     rating: 1,
     views: '5M views',
     playlist: ['Chill 🌱'],
-    releasedate: 'Nov 4, 2023',
+    releasedate: 'Nov 04, 2023',
     album: 'Hard to Imagine the Neighbourhood Ever Changing',
+    played: '21,215,618',
     time: '3:26',
   },
   {
@@ -22,6 +23,7 @@ export const musicData = [
     playlist: ['Instrumental 🎵'],
     releasedate: 'Oct 26, 2023',
     album: 'nightmares',
+    played: '19,856,112',
     time: '2:45',
   },
   {
@@ -34,6 +36,7 @@ export const musicData = [
     playlist: ['Chill 🌱', 'Instrumental 🎵', 'Rap 🎤'],
     releasedate: 'Dec 30, 2023',
     album: 'Greedy',
+    played: '16,564,223',
     time: '2:11',
   },
   {
@@ -47,6 +50,7 @@ export const musicData = [
     playlist: ['Rap 🎤'],
     releasedate: 'Dec 30, 2023',
     album: 'Lovin On me',
+    played: '16,240,390',
     time: '2:18',
   },
   {
@@ -59,6 +63,7 @@ export const musicData = [
     playlist: ['Chill 🌱'],
     releasedate: 'Dec 29, 2023',
     album: 'Paint The Town Red',
+    played: '14,367,500',
     time: '3:51',
   },
   {
@@ -72,6 +77,7 @@ export const musicData = [
     playlist: ['Rap 🎤'],
     releasedate: 'may 27, 2023',
     album: 'Dance The Night(From Barbie Movie)',
+    played: '14,367,500',
     time: '2:56',
   },
   {
@@ -85,6 +91,7 @@ export const musicData = [
     playlist: ['Rap 🎤'],
     releasedate: 'Dec 10, 2023',
     album: 'Water',
+    played: '14,367,500',
     time: '3:20',
   },
   {
@@ -98,6 +105,7 @@ export const musicData = [
     playlist: ['Chill 🌱'],
     releasedate: 'Jan 2, 2024',
     album: 'Push your limits',
+    played: '14,367,500',
     time: '2:24',
   },
 ];

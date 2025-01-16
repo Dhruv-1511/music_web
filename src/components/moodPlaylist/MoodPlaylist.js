@@ -16,13 +16,12 @@ const MoodPlaylist = () => {
             <LeftButtton refs={ListRef2} />
             <div className='Geners-list' ref={ListRef2}>
               {musicData.map(list => (
-                <>
                   <PlaylistCard
+                    key={list.id}
                     imgUrl={list.artwork}
                     alt={list.title}
                     songTitle={list.title}
                   />
-                </>
               ))
               }
             </div>

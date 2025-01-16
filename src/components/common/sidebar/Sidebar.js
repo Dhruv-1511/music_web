@@ -3,9 +3,6 @@ import './Sidebar.css'
 import { NavLink } from 'react-router-dom'
 
 const Sidebar = ({toggleSideBar, setToggleSideBar}) => {
-
-
-  console.log(toggleSideBar);
   
   return (
     <>

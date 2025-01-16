@@ -15,7 +15,7 @@ const Artist = () => {
             <LeftButtton refs={ListRef3} />
             <div className='Geners-list ' ref={ListRef3}>
                 {musicData.map(list => (
-                    <div className='artists'>
+                    <div className='artists' key={list.id}>
                         <img src={list.artwork} alt='' />
                         <p>{list.title}</p>
                     </div>

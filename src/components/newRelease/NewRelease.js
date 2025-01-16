@@ -19,14 +19,13 @@ const NewRelease = () => {
             {/* SongCard Component */}
             <div className='Weekly-list' ref={ListRef2}>
               { musicData.map((list) => (
-                <>
                   <SongCard
+                    key={list.id}
                     imgUrl={list.artwork}
                     alt={list.title}
                     songTitle={list.title}
                     artistName={list.artist}
                   />
-                </>
                 ))
               }
             </div>
