@@ -123,3 +123,114 @@ tr{
     cursor: pointer;
     text-decoration: none;
 }
+
+/************** Sign Up / LogIn **************/
+
+.login-container{
+    margin-block: 48px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.login-container-left h1{
+    font-size: 35px;
+}
+
+.login-container-left p{
+    margin-top: 10px;
+    font-size: 19px;
+}
+
+.login-container-right{
+    background-color:rgb(93 161 170);
+    min-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+}
+.login-top-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.lable-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-inputs{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.login-inputs1{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.inputs{
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid white;
+    color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.inputs input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+
+}
+.inputs input::placeholder{
+    color: white;
+}
+.or{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.hr-line{
+    background-color: white;
+    height: 2px;
+    width: 100%;
+}
+
+.login-container-right button{
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.google-signup{
+    background-color: transparent;
+    display: flex;
+    border: 2px solid white;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.google-signup:hover{
+    background-color: var(--bluecolor);
+    border: none;
+    box-shadow: 0px 0px 10px 2px black;
+}

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './home.css'
 import { blueColor } from '../../assets/color'
 import { musicData } from '../../db'
@@ -14,6 +14,9 @@ import MoodPlaylist from '../moodPlaylist/MoodPlaylist'
 import SongListCard from '../songListCard/SongListCard'
 import { FaPlus } from "react-icons/fa";
 import { NavLink } from 'react-router-dom'
+import SignUp from '../signUp/SignUp'
+import LogIn from '../logIn/LogIn'
+
 
 
 const Home = () => {
@@ -21,7 +24,8 @@ const Home = () => {
   const topSixSong = musicData.slice(0, 6)
   const ListRef1 = useRef(null);
   console.log('home');
-  
+  const [user, setUser] = useState("signup")
+
 
   return (
     <main className='dd'>
@@ -120,6 +124,28 @@ const Home = () => {
         <MusicVideo />
         <TopAlbums />
         <MoodPlaylist />
+
+        <section className='login-container'>
+          <div className='login-container-left'>
+            <h1>Join Our Platform</h1>
+            <p>You can be one of the members of our platform by just adding some necessarily information. if you already have an account on our website, you can just hit the Login button.</p>
+          </div>
+          <div className='login-container-right'>
+            <div className='login-top-content'>
+              <p onClick={() => setUser("signup")} style={{
+                color: user === "signup" ? '#000000' : '',
+                fontSize: user === "signup" ? '27px' : '',
+                textDecoration: user === "signup" ? 'underline' : ''
+              }}>Sign Up</p>
+              <p onClick={() => setUser("login")} style={{
+                color: user === "login" ? '#000000' : '',
+                fontSize: user === "login" ? '27px' : '',
+                textDecoration: user === "login" ? 'underline' : ''
+              }}>Login</p>
+            </div>
+            {user === "signup" ? <SignUp /> : <LogIn />}
+          </div>
+        </section>
       </div>
     </main>
   )
