@@ -8,33 +8,35 @@ import Contact from './components/contact/Contact';
 import Premium from './components/premium/Premium';
 import Navbar from './components/common/navbar/Navbar';
 import Footer from './components/common/footer/Footer';
-import Sidebar from './components/common/sidebar/Sidebar'
+import Sidebar from './components/common/sidebar/Sidebar';
 import Albums from './components/albums/Albums';
 import Artists from './components/artists/Artists';
+import AudioPlayer from './components/audioPlayer/AudioPlayer'; // New component for custom audio player
 
 function App() {
- 
-  const [toggleSideBar, setToggleSideBar] = useState(false)
+  const [toggleSideBar, setToggleSideBar] = useState(false);
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Sidebar toggleSideBar={toggleSideBar} setToggleSideBar={setToggleSideBar}/>
+        <Sidebar toggleSideBar={toggleSideBar} setToggleSideBar={setToggleSideBar} />
         <div className='hero-box'>
           <Routes>
-            <Route path="/" element={<Navbar toggleSideBar={toggleSideBar} setToggleSideBar={setToggleSideBar}/>} >
+            <Route path="/" element={<Navbar toggleSideBar={toggleSideBar} setToggleSideBar={setToggleSideBar} />}>
               <Route path="/" element={<Home />} />
               <Route path="/discover" element={<Discover />} />
               <Route path="/albums" element={<Albums />} />
               <Route path="/artists" element={<Artists />} />
               <Route path="/about" element={<AboutUs />} />
-              <Route path="/contact" element={<Contact/>} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="/premium" element={<Premium />} />
             </Route>
           </Routes>
           <Footer />
         </div>
       </BrowserRouter>
+      
+      <AudioPlayer />
     </div>
   );
 }

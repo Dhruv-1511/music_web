@@ -111,9 +111,13 @@
     }
     .album-top-left-container{
         margin-top: 20px;
+        gap: 15px;
     }
     .trending-detail{
         display: none;
+    }
+    .album-content-bottom-main{
+        gap: 15px;
     }
     .album-content-bottom{
         gap: 10px;
