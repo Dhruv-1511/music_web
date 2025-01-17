@@ -12,7 +12,6 @@ function Button({handleClick, title, bgColor}) {
                 backgroundColor: bgColor ? bgColor : 'transparent',
                 border: bgColor ? 'none' : `1px solid ${blueColor}`,
                 borderRadius: '6px',
-                height: '30px',
                 color: bgColor ? 'white' : blueColor,
                 fontSize: '16px',   
                 width: '100%',
