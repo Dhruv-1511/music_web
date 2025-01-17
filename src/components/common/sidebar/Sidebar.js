@@ -1,6 +1,6 @@
 import React from 'react'
 import './Sidebar.css'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const Sidebar = ({toggleSideBar, setToggleSideBar}) => {
   
@@ -10,7 +10,7 @@ const Sidebar = ({toggleSideBar, setToggleSideBar}) => {
         toggleSideBar && <div className='morphism' onClick={() => setToggleSideBar(false)}></div>}
 
       <div className={`sidebar ${toggleSideBar && 'show-sidebar'}`}>
-        <p className='logo'>Melodies</p>
+        <Link to="/" style={{textDecoration: "none"}}><p className='logo'>Melodies</p></Link>
         <div className='menu'>
           <p className='menu_name'>Menu</p>
           <NavLink to="/"

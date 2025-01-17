@@ -1,0 +1,98 @@
+.audio-player {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    align-items: center;
+    padding-block: 14px;
+    padding-inline: 2.5%;
+    background-color: #222; 
+    border-radius: 10px;
+    color: white;
+    width: 95%; 
+  }
+  
+  .album-cover {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  .audio-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .audio-top-container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .track-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .track-info h4 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .track-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 20px;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: var(--bluecolor); 
+    font-size: 22px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  .tracker {
+    width: 100%;
+    margin-top: 5px;
+    appearance: none;
+    background: var(--bluecolor); 
+    height: 4px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  .tracker::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: var(--bluecolor);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .tracker::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: var(--bluecolor);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+  }
+  

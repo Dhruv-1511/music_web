@@ -1,5 +1,6 @@
 import React from 'react'
 import './footer.css'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -35,7 +36,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='social_icons'>
-                    <p className='logo'>Melodies</p>
+                    <Link to="/" style={{textDecoration: "none"}}><p className='logo'>Melodies</p></Link>
                     <div className='social'>
                         <img src='facebook.png' alt='' />
                         <img src='instagram.png' alt='' />
