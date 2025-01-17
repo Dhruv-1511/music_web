@@ -95,4 +95,9 @@
     cursor: pointer;
     border: none;
   }
-  
+  @media (max-width: 480px) {
+    .audio-player{
+      width: 90%;
+      padding-inline: 5%;
+    }
+  }
