@@ -30,8 +30,8 @@
 }
 
 .song-img{
-    height: 65px;
-    width: 65px;
+    height: 50px;
+    width: 50px;
 }
 
 .song-img img{
@@ -57,6 +57,7 @@
     }
     .song-no{
         font-size: 18px;
+        padding-right: 5px;
     }
     .heart{
         display: none;
@@ -75,6 +76,5 @@
     }
     .song-no{
         font-size: 14px;
-        padding-right: 5px;
     }
 }

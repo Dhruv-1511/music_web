@@ -27,7 +27,7 @@ const PopularCard = ({
                         </div>
                     </div>
                 </td>
-                <td>{releaseDate}</td>
+                <td className='table-album'>{releaseDate}</td>
                 <td>{played}</td>
                 <td >
                     <div className='song-like'>

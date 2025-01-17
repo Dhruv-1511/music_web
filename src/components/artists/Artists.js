@@ -7,6 +7,7 @@ import RightButton from '../common/buttons/rightButton';
 import ArtistsAlbum from '../ArtistsAlbum';
 import SingleSongs from '../SingleSongs';
 import ArtistPlaylist from '../ArtistPlaylist';
+import SecondNavbar from '../secondNavbar/SecondNavbar';
 
 const Artists = () => {
     const [liked, setLiked] = useState({});
@@ -40,6 +41,7 @@ const Artists = () => {
             <div className='Artists-container'>
                 {/* Popular Artists Image */}
                 <div className='artist-top-container'>
+                    <SecondNavbar />
                     <div className='artist-top-img'>
                         <img src='eminem.png' alt='' />
                     </div>
@@ -55,7 +57,7 @@ const Artists = () => {
                                 <tr>
                                     <th>No</th>
                                     <th>Name</th>
-                                    <th>Release Date</th>
+                                    <th className='table-album'>Release Date</th>
                                     <th>Played</th>
                                     <th>Time</th>
                                 </tr>
@@ -152,7 +154,7 @@ const Artists = () => {
                 </section>
 
                 {/* Artists Fans Also Listen To */}
-                <div className='artist-container'>
+                <div className='artist-fans-container'>
                     <p className='list-section-header'>Artists Fans<span> Also Listen To</span></p>
                     <LeftButtton refs={ListRef4} />
                     <div className='Geners-list ' ref={ListRef4}>

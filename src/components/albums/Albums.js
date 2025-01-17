@@ -8,7 +8,7 @@ import SecondNavbar from '../secondNavbar/SecondNavbar';
 const Albums = () => {
 
   const [liked, setLikeed] = useState({});
-  
+
   const handleAdd = (e, ListId) => {
     e.stopPropagation()
     setLikeed(pre => ({
@@ -27,7 +27,7 @@ const Albums = () => {
         <section className='main-albums'>
 
           <SecondNavbar />
-        
+
           <div className='album-top-container'>
             <div className='album-top-left-container'>
               <div className='album-img'>
@@ -35,30 +35,34 @@ const Albums = () => {
               </div>
               <div className='album-content'>
                 <p className='list-section-header'>Trending songs <span>mix</span></p>
-                <p>tate mcree, nightmares, the neighberhood, doja cat and ...</p>
-                <div className='album-content-bottom'>
-                  <p>20 songs</p>
-                  <div className='album-bottom-dot' />
-                  <p>1h 36m</p>
+                <p className='trending-detail'>tate mcree, nightmares, the neighberhood, doja cat and ...</p>
+                <div className='album-content-bottom-main'>
+                  <div className='album-content-bottom'>
+                    <p>20 songs</p>
+                    <div className='album-bottom-dot' />
+                    <p>1h 36m</p>
+                  </div>
+
+                  <div className='album-play-content'>
+                    <div className='album-play'>
+                      <p className='play-all'>Play All</p>
+                      <FaRegCirclePlay className='play-btn' />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className='album-play-content'>
-              <div className='album-play'>
-                <p>Play All</p>
-                <FaRegCirclePlay className='play-btn' />
-              </div>
-            </div>  
+
           </div>
         </section>
 
-        <table >
+        <table className='album-table'>
           <thead>
             <tr>
               <th>No</th>
               <th>Name</th>
               <th>Release Date</th>
-              <th>Album</th>
+              <th className='table-album'>Album</th>
               <th>Time</th>
             </tr>
           </thead>
@@ -73,7 +77,7 @@ const Albums = () => {
                 artistName={list.artist}
                 releaseDate={list.releasedate}
                 album={list.album}
-                time={list.time} 
+                time={list.time}
                 handleSelect={handleSelect}
                 handleAdd={handleAdd}
                 liked={liked}
