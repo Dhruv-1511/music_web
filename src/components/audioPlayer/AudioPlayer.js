@@ -47,11 +47,11 @@ const AudioPlayer = () => {
                         <p>TrackTribe</p>
                     </div>
                     <div className="controls">
-                        <button ><TbPlayerSkipBackFilled className='control' /></button>
-                        <button onClick={togglePlayPause}>
+                        <button className='audio-btn' ><TbPlayerSkipBackFilled className='control' /></button>
+                        <button className='audio-btn' onClick={togglePlayPause}>
                             {isPlaying ? <FaPause className='control' /> : <FaPlay className='control' />}
                         </button>
-                        <button ><TbPlayerSkipForwardFilled className='control' /></button>
+                        <button className='audio-btn' ><TbPlayerSkipForwardFilled className='control' /></button>
                     </div>
                 </div>
                 <input type="range" className="tracker"
