@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Saira:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+.playlist-container{
+    background-color: #1F1F1F;
+    border-radius: 10px;
+}
+.playlist-card-container{
+    position: relative;
+}
+.playlist-song-image-box{
+    min-width: 230px;
+    height: 190px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.playlist-song-image-box img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.playlist-title{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    bottom: 0;
+    font-size: 20px;
+    font-family: "Just Another Hand";
+    box-shadow: inset 0px 0px 60px 5px black;
+    letter-spacing: 2px;
+}
+
+.playlist-list-box{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.playlist-name{
+    padding-block: 10px;
+    padding-left: 5px;
+}
+@media (max-width: 800px) {
+    .playlist-song-image-box {
+        height: 180px;
+        min-width: 180px;
+    }
+}
+@media (max-width: 480px) {
+    .playlist-song-image-box {
+        height: 120px;
+        min-width: 120px;
+    }
+    .playlist-title{
+        font-size: 12px;
+        font-weight: unset;
+        letter-spacing: 1px;
+    }
+    .playlist-name {
+        padding-left: unset;
+        text-align: center;
+        font-size: 14px;
+    }
+}

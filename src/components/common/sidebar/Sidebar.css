@@ -1,0 +1,78 @@
+.sidebar{
+    z-index: 10;
+    min-width: 250px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items :center;
+    padding-block: 40px;
+    background-color: #181818;
+    border-right: 2px solid var(--bluecolor);
+    box-shadow: 0px 0px 10px 0px var(--bluecolor);
+    
+}
+.logo{
+    color: var(--bluecolor);
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+.menu{
+    display: flex;
+    gap: 20px;
+    margin-left: 35px;
+    align-self: start;
+    flex-direction: column;
+    width: 70%;
+}
+.menu_name{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--bluecolor);
+}
+.menu_icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.menu_icon img{
+    height: 22px;
+}
+.menu_icon p{
+    color: white;
+}
+.active{
+    background-color: var(--bluecolor);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+.notActive{
+    text-decoration: none;
+}
+/**************** Media Query ********************/
+
+@media(max-width: 1070px) {
+    .sidebar{
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        transform: translateX(-280px);
+        transition: all 500ms;
+    }  
+
+    .show-sidebar{
+        transform: translateX(0px);
+    }
+
+    .morphism{
+        z-index: 9;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #292727b1;
+    } 
+}

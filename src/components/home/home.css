@@ -1,3 +1,287 @@
+.dd{
+    width: 100%;
+    overflow: hidden;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
 .Home-container{
+    /* max-width: 1400px; */
+    margin-inline: auto;
+    padding-inline: 26px;
+    margin-bottom: 24px;
+}
+
+.Top-container{
     color: white;
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    border-radius: 35px;
+    background: url('../../../public/main_girl_img.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.contant-box{
+    max-width: 360px;
+    margin-left: 26px;
+}
+
+.contant-box .buttons{
+    display: flex;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.para-text{
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.top-header-text{
+    font-size: 2.5rem;
+    line-height: 58px;
+}
+
+.middle-text{
+    color: var(--bluecolor);
+}
+
+/*************** lists styles **************/
+
+.list-section-header{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.list-section-header span{
+    color: var(--bluecolor);
+}
+
+.second-container{
+    margin-block: 48px;
+    overflow: hidden;
+    padding-inline: 0px;
+}
+
+/************** Weeklt-list **************/
+
+.weekly-list-box{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.Weekly-list{
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    overflow-x: auto; 
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.Weekly-list::-webkit-scrollbar {
+    display: none;
+}
+
+.trending-song-table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table{
+    color: white;
+    width: 100%;
+    margin-block: 26px;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+tr, td{
+    text-align: center;
+}
+
+tr{
+    border: 1px solid white;
+}
+
+.view-all{
+    background-color: #1E1E1E;
+    color: white;
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/************** Sign Up / LogIn **************/
+
+.login-container{
+    margin-block: 48px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.login-container-left h1{
+    font-size: 35px;
+}
+
+.login-container-left p{
+    margin-top: 10px;
+    font-size: 19px;
+}
+
+.login-container-right{
+    background-color:rgb(93 161 170);
+    min-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+}
+.login-top-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.lable-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-inputs{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.login-inputs1{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.inputs{
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid white;
+    color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.inputs input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+
+}
+.inputs input::placeholder{
+    color: white;
+}
+.or{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.hr-line{
+    background-color: white;
+    height: 2px;
+    width: 100%;
+}
+
+.login-container-right button{
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.google-signup{
+    background-color: transparent;
+    display: flex;
+    border: 2px solid white;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.google-signup:hover{
+    background-color: var(--bluecolor);
+    border: none;
+    box-shadow: 0px 0px 10px 2px black;
+}
+@media (max-width: 800px) {
+    .Home-container{
+        padding-inline: 14px;
+    }
+    .Top-container{
+        background: none;
+        height: auto;
+        border-radius: unset;
+        margin-block: 80px;
+    }
+    .contant-box{
+        max-width: 100%;
+        text-align: center;
+        margin-left: unset;
+    }
+    .top-header-text {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    .para-text {
+        margin-top: 15px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .list-section-header {
+        font-size: 1.4rem;
+    }
+    .trending-song-table{
+        font-size: 12px;
+    }
+    table{
+        border-spacing: 2px;
+    }
+    .table-album{
+        display: none;
+    }
+    .login-container{
+        flex-direction: column;
+    }
+    .login-container-left{
+        text-align: center;
+    }
+    .login-container-right{
+        padding: 12px;
+        min-width: unset;
+        width: 90%;
+    }
+    .login-inputs1{
+        flex-direction: column;
+    }
 }

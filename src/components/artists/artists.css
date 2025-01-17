@@ -1,0 +1,120 @@
+.Artists-container {
+    margin-inline: 26px;
+    border-radius: 10px;
+    padding-bottom: 48px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.artist-top-container {
+    position: relative;
+}
+
+.artist-top-img {
+    width: 100%;
+}
+
+.artist-top-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.artists-name {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    color: white;
+    font-size: 85px;
+    font-weight: 600;
+}
+
+.popular-section-header {
+    margin-left: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.show-more {
+    color: white;
+    background-color: var(--bluecolor);
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.artists-second-container {
+    margin-block: 48px;
+    overflow: hidden;
+    padding-inline: 15px;
+}
+
+
+.artists img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.artist-fans-container{
+    margin-block: 2rem;
+    position: relative;
+    padding-inline: 15px;
+}
+
+.artists-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 285px;
+    min-width: 285px;
+}
+
+.artists-img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.artists-img p {
+    margin-top: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 800px) {
+    .Artists-container{
+        margin-inline: 14px;
+    }
+    .artists-name {
+        bottom: 35px;
+        left: 35px;
+        font-size: 55px;
+    }
+    .popular-section-header{
+        margin-left: 10px;
+        font-size: 30px;
+    }
+    .artists-img{
+        min-height: 165px;
+        min-width: 165px;
+    }
+    .artists-img p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artists-name{
+        bottom: 15px;
+        left: 15px;
+        font-size: 25px;
+    }
+    .artists-img{
+        min-height: 120px;
+        min-width: 120px;
+    }
+    .artists-img p{
+        font-size: 12px;
+    }
+}

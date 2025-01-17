@@ -1,0 +1,25 @@
+.Discover-container {
+    margin-inline: auto;
+    max-width: 1400px;
+    margin-top: 2rem;
+    padding-inline: 26px;
+    margin-bottom: 24px;
+}
+
+.Geners-list {
+    margin-block: 26px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    overflow-x: auto;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.Geners-list::-webkit-scrollbar {
+    display: none;
+}
+
+.mood-playlist-container {
+    margin-block: 2rem;
+}
