@@ -285,3 +285,8 @@ tr{
         flex-direction: column;
     }
 }
+@media (max-width:480px) {
+    .second-container{
+        margin-block: 24px;
+    }
+}
